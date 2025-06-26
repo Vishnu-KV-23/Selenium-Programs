@@ -11,15 +11,20 @@ public class VerifyPageTitle {      // DO NOT CHANGE THE CLASS NAME
 	    
 	    // Invoke the getDriver() method from the DriverSetup File 
 	    // Store it in static variable 'driver', navigate to basrUrl and return it
-
-	    return null;
+    	 //public static   WebDriver driver ;
+    	 
+    	 driver=DriverSetup.getDriver();
+    	 
+    	 driver.navigate().to(baseUrl);
+    	 
+	    return driver;
 	}
 
 	public static String getPageTitle() {    // DO NOT CHANGE THE METHOD SIGNATURE
 
 		// identify and page title and Store into the static variable and return it
-
-		return null;
+		pageTitle=driver.getTitle();
+		return pageTitle;
 	}
 
 	public static void main(String[] args) {    // DO NOT CHANGE THE METHOD SIGNATURE
