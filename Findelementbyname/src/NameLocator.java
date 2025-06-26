@@ -16,7 +16,7 @@ public class NameLocator {      // DO NOT CHANGE THE CLASS NAME
 	    // Invoke the getWebDriver() method from the DriverSetup File 
 	    // Store it in static variable 'driver', navigate and return it
 	    
-	    driver=driverSetup.getWebDriver();
+	    driver=DriverSetup.getWebDriver();
 	    // Please do NOT remove the below URL navigation code
 	    driver.get(baseUrl);
 	    
@@ -27,7 +27,7 @@ public class NameLocator {      // DO NOT CHANGE THE CLASS NAME
        
        // identify and locate a 'Username' textbox element using an 'name' locator
        // Store the element in the static variable 'textboxElmt' and return it
-         
+         textboxElmt=driver.findElement(By.name("usrnm"));
        return textboxElmt;
 	}
 	
@@ -35,8 +35,9 @@ public class NameLocator {      // DO NOT CHANGE THE CLASS NAME
        
        // Get the placeholder of 'username' text box using the textboxElmt and return it. 
        // Hint - use getAttribute() method te get the placeholder value
-       return null;
+		String ph=textboxElmt.getAttribute("placeholder");
        
+		return ph ;
 	}
 	
 	public static void main(String[] args) {    // DO NOT CHANGE THE METHOD SIGNATURE
