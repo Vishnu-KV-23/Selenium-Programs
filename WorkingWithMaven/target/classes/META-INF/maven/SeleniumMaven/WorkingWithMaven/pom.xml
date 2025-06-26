@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>SeleniumMaven</groupId>
+  <artifactId>WorkingWithMaven</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+    <!--## Add the below dependencies-->
+    <!--
+     groupId                  artifactId           version     
+    
+     org.seleniumhq.selenium  selenium-java        4.11.0      
+    -->
+  
+</project>
