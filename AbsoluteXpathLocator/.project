@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>FluentWait</name>
-	<comment>Fluent Wait</comment>
+	<name>AbsoluteXpathLocator</name>
+	<comment>AbsoluteXpathLocator</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1751297650700</id>
+			<id>1751297650660</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
