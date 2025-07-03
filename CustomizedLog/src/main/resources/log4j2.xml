@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+    	<Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    <!--  
+        Add a Console appender to log messages to a Console:
+        - name: "Console" (The name of the appender)
+        - target: "SYSTEM_OUT" (The file where the logs will be written)
+        Define the pattern layout for the log messages:
+            - %d{yyyy-MM-dd HH:mm:ss} : Date and time of the log event
+         -->
+     
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+        <!--  
+            Add the Console appender to route log messages to the console:           
+             -->
+           	<AppenderRef ref="Console"/>
+        </Root>
+    </Loggers> 
+</Configuration>

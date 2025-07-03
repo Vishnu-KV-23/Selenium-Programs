@@ -19,7 +19,7 @@ public class Slider  {  //DO NOT Change the class Name
 
 	    // Invoke the getWebDriver() method from the DriverSetup File 
 	    // Store it in static variable 'driver', navigate and return it
-	    
+	    driver=DriverSetup.getWebDriver();
 	    
 	    // Please do NOT remove the below URL navigation code
 	    driver.get(baseUrl);
@@ -38,7 +38,32 @@ public class Slider  {  //DO NOT Change the class Name
         // Locate the target web element that needs to be dropped.        
         // Creating object of Actions class to build composite actions
         // Performing the drag and drop action
-        
+		// Find the element you want to drag - look for draggable elements
+		WebElement sourceElement = driver.findElement(By.id("drag")); // or whatever the actual ID is
+		
+		
+		WebElement targetElement = driver.findElement(By.id("droppable"));
+		
+		// Perform the drag and drop action
+		
+		Actions actions = new Actions(driver);
+		actions.dragAndDrop(sourceElement, targetElement).perform();
+		
+		
+		
+		WebElement message1Element = driver.findElement(By.xpath("//p[normalize-space(text())='Dropped!']"));
+		System.out.println(message1Element.getText());
+		
+		
+		WebElement messageElement = driver.findElement(By.id("result"));
+		System.out.println(messageElement.getText());
+		
+		
+		
+		
+		
+		
+		
         // Print the output texts displayed after drag and drop
 	}
 	
@@ -46,7 +71,9 @@ public class Slider  {  //DO NOT Change the class Name
         
 	public static void main(String[] args) {    //DO NOT change the method signature
 	    Slider slider =new Slider();
+	    slider.createDriver();
 	    
+	    slider.implDragnDrop();
 	    //Call the method createDriver()
 	    //Call the method implDragnDrop()
 	    //Print the message displayed after drag and drop. 
