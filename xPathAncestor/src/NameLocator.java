@@ -14,7 +14,7 @@ public class NameLocator {     //DO NOT Change the class name
 	
 	    // Invoke the getWebDriver() method from the DriverSetup File 
 	    // Store it in static variable 'driver', navigate and return it
-	    
+	    driver=DriverSetup.getWebDriver();
 	    
 	    // Please do NOT remove the below URL navigation code
 	    driver.get(baseUrl);
@@ -26,13 +26,22 @@ public class NameLocator {     //DO NOT Change the class name
 	
 	   /*Using the driver, Find the element ancestor and its text and assign the text to 'fName' */
        /*Close the driver*/
-	    return null;
+		WebElement totalElement = driver.findElement(By.xpath("//h4[text()='Total']/ancestor::div[@class='booking-form']"));
+		fName = totalElement.getText();
+		driver.quit();
+		return fName;
+		
+		//driver.findElement(By.xpath(""))
+		
+	//    return null;
 	}
 	
 	public static void main(String[] args) {    //DO NOT Change the method Signature
 	
 	    NameLocator namLocator=new NameLocator();
 	    //Add required code here
+	    namLocator.setupDriver();
+	    namLocator.getNameLocator();
 	   
 	}
 
