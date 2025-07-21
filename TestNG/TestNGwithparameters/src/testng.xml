@@ -1,0 +1,9 @@
+<suite name="Suite">
+<test name="Test">
+<parameter name="firstname" value="John"/>
+<parameter name="lastname" value="Doe"/>
+<classes>
+<class name="TestGenerateFullName"/>
+</classes>
+</test>
+</suite>
